@@ -1,7 +1,7 @@
 function divEscapedContentElement(message) {
 	if (message.indexOf('www.') != -1 && message.indexOf('http://') == -1) {
 		return $('<div><a target="_blank" href="http://' + message + '">' + message + '</a></div>');
-	} else if (message.indexOf('www.') != -1 && message.indexOf('http://') != -1) {
+	} else if (message.indexOf('http://') != -1) {
 		return $('<div><a target="_blank" href="' + message + '">' + message + '</a></div>');
 	} else {
 		return $('<div></div>').text(message);
